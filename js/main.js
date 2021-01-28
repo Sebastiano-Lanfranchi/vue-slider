@@ -25,19 +25,14 @@ new Vue({
     prev: function() {
      this.imagesIDX -= 1;
      if(this.imagesIDX < 0){
-       this.imagesIDX = this.length -1
+       this.imagesIDX = this.images.length -1
      }
    },
-   // activeDot: function(){
-   //   if(imagesIDX === indexOf(dots){
-   //     return{
-   //       attivatore: 'active'
-   //     };
-   //   }
-   // }
+   activeDot: function(newIndex){
+     this.imagesIDX === newIndex
 
-    }
-
+   },
+   }
 });
 
 Vue.config.devtools = true;
