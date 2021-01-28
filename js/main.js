@@ -17,19 +17,25 @@ new Vue({
       return result;
     },
     next: function() {
-      this.imagesIDX ++;
+      this.imagesIDX += 1;
+      if(this.imagesIDX > this.images.length -1){
+        this.imagesIDX = 0
+      }
     },
     prev: function() {
-     this.imagesIDX --;
-   },
-   activeDot: function(){
-     if(imagesIDX === dots){
-       return{
-         attivatore: 'active'
-       };
+     this.imagesIDX -= 1;
+     if(this.imagesIDX < 0){
+       this.imagesIDX = this.length -1
      }
-   }
-   
+   },
+   // activeDot: function(){
+   //   if(imagesIDX === indexOf(dots){
+   //     return{
+   //       attivatore: 'active'
+   //     };
+   //   }
+   // }
+
     }
 
 });

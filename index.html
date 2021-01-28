@@ -19,7 +19,11 @@
                   <button v-on:click="next">next</button>
                 </div>
                 <div class="nav">
-                    <i v-for="dot in dots" class="fas fa-circle" :class=""></i>
+                    <i v-for="(dot, index) in dots" :class="{
+                    fas: true,
+                    'fa-circle': true,
+                    active: index === imagesIDX
+                  }" ></i>
                 </div>
             </div>
         </div>
