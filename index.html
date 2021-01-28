@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Slider</title>
+    </head>
+    <body>
+      <div id="app">
+        <div class="container">
+            <div class="slider-wrapper">
+                </div>
+                  <div>
+                  <span><img class="images" :src="images[imagesIDX]"  alt=""></span>
+                  <button v-on:click="prev">prev</button>
+                  <button v-on:click="next">next</button>
+                </div>
+                <div class="nav">
+                    <i v-for="dot in dots" class="fas fa-circle" :class=""></i>
+                </div>
+            </div>
+        </div>
+
+
+
+        <script src="js/main.js"></script>
+    </body>
+</html>
